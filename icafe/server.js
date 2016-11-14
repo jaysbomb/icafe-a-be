@@ -13,7 +13,7 @@ var koa = require('koa'),
 var config = require('./config/config')[process.env.NODE_ENV || 'development'];
 
 var app = koa();
-app.use(serve(__dirname + '/www'));
+app.use(serve(__dirname + '/app/www'));
 app.use(json({ pretty: false, param: 'pretty' }));
 app.use(bodyParser());
 app.use(cors());
